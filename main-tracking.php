@@ -127,7 +127,7 @@
                     function(data){
                       $("#ViewTrackingMain").html(data);
                     });
-                  },2000);
+                  },1000);
                 }
               }
           });

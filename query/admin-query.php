@@ -225,6 +225,7 @@ if ($_POST['post']=="CheckTrackingMain") {
                           ta.tra_email = '".htmlentities($_POST['trvalue'], ENT_QUOTES)."'
                         ) AND ta.tra_status = '0'
                       ) ;";
+  //echo $SqlSelect;
   if (select_num($SqlSelect)>0) { $i =1;
     foreach (select_tb($SqlSelect) as $row) {
       $SqlUpdate = "UPDATE tracking_all SET tra_search = tra_search+1 WHERE (tra_id = '".$row['tra_id']."') ";
